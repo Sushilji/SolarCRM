@@ -1,0 +1,59 @@
+@model SolarCRMManagement.Models.Master.State
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>State</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="StateId" />
+            <div class="form-group">
+                <label asp-for="StateCode" class="control-label"></label>
+                <input asp-for="StateCode" class="form-control" />
+                <span asp-validation-for="StateCode" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="StateName" class="control-label"></label>
+                <input asp-for="StateName" class="form-control" />
+                <span asp-validation-for="StateName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="StateHead" class="control-label"></label>
+                <input asp-for="StateHead" class="form-control" />
+                <span asp-validation-for="StateHead" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="IsActive" class="control-label"></label>
+                <input asp-for="IsActive" class="form-check-input" />
+                <span asp-validation-for="IsActive" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CreatedDate" class="control-label"></label>
+                <input asp-for="CreatedDate" class="form-control" />
+                <span asp-validation-for="CreatedDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ModifiedDate" class="control-label"></label>
+                <input asp-for="ModifiedDate" class="form-control" />
+                <span asp-validation-for="ModifiedDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

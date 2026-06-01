@@ -1,0 +1,113 @@
+@model IEnumerable<SolarCRMManagement.Models.Master.Branch>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.CityId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BranchCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BranchName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Address)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ContactPerson)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MobileNo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EmailId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.GSTNo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BranchManager)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IsActive)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CreatedDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ModifiedDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.City)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BranchCode)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(model => item.CityId)
+            </td>
+            <td>
+                @Html.DisplayFor(model => item.BranchCode)
+            </td>
+            <td>
+                @Html.DisplayFor(model => item.BranchName)
+            </td>
+            <td>
+                @Html.DisplayFor(model => item.Address)
+            </td>
+            <td>
+                @Html.DisplayFor(model => item.ContactPerson)
+            </td>
+            <td>
+                @Html.DisplayFor(model => item.MobileNo)
+            </td>
+            <td>
+                @Html.DisplayFor(model => item.EmailId)
+            </td>
+            <td>
+                @Html.DisplayFor(model => item.GSTNo)
+            </td>
+            <td>
+                @Html.DisplayFor(model => item.BranchManager)
+            </td>
+            <td>
+                @Html.DisplayFor(model => item.IsActive)
+            </td>
+            <td>
+                @Html.DisplayFor(model => item.CreatedDate)
+            </td>
+            <td>
+                @Html.DisplayFor(model => item.ModifiedDate)
+            </td>
+            <td>
+                @Html.DisplayFor(model => item.City)
+            </td>
+            <td>
+                @Html.DisplayFor(model => item.BranchCode)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.BranchId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.BranchId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.BranchId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
